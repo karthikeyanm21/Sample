@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AplService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53157/AplService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53157/AplService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53157/AplService.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost:53157/AplService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/APLPX.Services" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAplService_CheckStagingDBConfigByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckStagingDBConfigByUserId" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_CheckStagingDBConfigByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckStagingDBConfigByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_GetStagingDbInfoByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStagingDbInfoByUser" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_GetStagingDbInfoByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStagingDbInfoByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_TestConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnection" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_TestConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_SaveStagingDbConnString_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveStagingDbConnString" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_SaveStagingDbConnString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveStagingDbConnStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_SaveImportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveImportData" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_SaveImportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveImportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_ApplyBRuleForImportedData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyBRuleForImportedData" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_ApplyBRuleForImportedData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyBRuleForImportedDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_GetResultSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultSet" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_GetResultSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_UpdateResultTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResultTable" />
+  </wsdl:message>
+  <wsdl:message name="IAplService_UpdateResultTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResultTableResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAplService">
+    <wsdl:operation name="CheckStagingDBConfigByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAplService/CheckStagingDBConfigByUserId" message="tns:IAplService_CheckStagingDBConfigByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAplService/CheckStagingDBConfigByUserIdResponse" message="tns:IAplService_CheckStagingDBConfigByUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStagingDbInfoByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAplService/GetStagingDbInfoByUser" message="tns:IAplService_GetStagingDbInfoByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAplService/GetStagingDbInfoByUserResponse" message="tns:IAplService_GetStagingDbInfoByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAplService/TestConnection" message="tns:IAplService_TestConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAplService/TestConnectionResponse" message="tns:IAplService_TestConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveStagingDbConnString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAplService/SaveStagingDbConnString" message="tns:IAplService_SaveStagingDbConnString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAplService/SaveStagingDbConnStringResponse" message="tns:IAplService_SaveStagingDbConnString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveImportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAplService/SaveImportData" message="tns:IAplService_SaveImportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAplService/SaveImportDataResponse" message="tns:IAplService_SaveImportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyBRuleForImportedData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAplService/ApplyBRuleForImportedData" message="tns:IAplService_ApplyBRuleForImportedData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAplService/ApplyBRuleForImportedDataResponse" message="tns:IAplService_ApplyBRuleForImportedData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAplService/GetResultSet" message="tns:IAplService_GetResultSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAplService/GetResultSetResponse" message="tns:IAplService_GetResultSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResultTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAplService/UpdateResultTable" message="tns:IAplService_UpdateResultTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAplService/UpdateResultTableResponse" message="tns:IAplService_UpdateResultTable_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAplService" type="tns:IAplService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckStagingDBConfigByUserId">
+      <soap:operation soapAction="http://tempuri.org/IAplService/CheckStagingDBConfigByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStagingDbInfoByUser">
+      <soap:operation soapAction="http://tempuri.org/IAplService/GetStagingDbInfoByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConnection">
+      <soap:operation soapAction="http://tempuri.org/IAplService/TestConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveStagingDbConnString">
+      <soap:operation soapAction="http://tempuri.org/IAplService/SaveStagingDbConnString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveImportData">
+      <soap:operation soapAction="http://tempuri.org/IAplService/SaveImportData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyBRuleForImportedData">
+      <soap:operation soapAction="http://tempuri.org/IAplService/ApplyBRuleForImportedData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultSet">
+      <soap:operation soapAction="http://tempuri.org/IAplService/GetResultSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResultTable">
+      <soap:operation soapAction="http://tempuri.org/IAplService/UpdateResultTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AplService">
+    <wsdl:port name="BasicHttpBinding_IAplService" binding="tns:BasicHttpBinding_IAplService">
+      <soap:address location="http://localhost:53157/AplService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

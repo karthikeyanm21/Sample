@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<AplBRuleEngine>
+  <Rule>
+    <Scope>Price</Scope>
+	<ValidationRegEx>Price > 0</ValidationRegEx>    
+    <ErrorMsg>Price must be greater than to 0</ErrorMsg>    
+  </Rule>  
+  <Rule>
+    <Scope>Shipping</Scope>
+	<ValidationRegEx>Shipping > 0</ValidationRegEx>    
+    <ErrorMsg>Shipping must be greater than 0</ErrorMsg>    
+  </Rule>  
+  <Rule>
+    <Scope>InStock</Scope>
+	<ValidationRegEx>InStock > 0</ValidationRegEx>    
+    <ErrorMsg>InStock must be greater than 0</ErrorMsg>    
+  </Rule>  
+  <Rule>
+    <Scope>InStock</Scope>
+	<ValidationRegEx>InStock  notnull</ValidationRegEx>    
+    <ErrorMsg>InStock must be not null</ErrorMsg>    
+  </Rule>    
+   <Rule>
+    <Scope>Sku</Scope>
+	<ValidationRegEx>Sku  notnull</ValidationRegEx>    
+    <ErrorMsg>Sku must be not null</ErrorMsg>    
+  </Rule>  
+</AplBRuleEngine>
