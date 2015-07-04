@@ -1,5 +1,0 @@
-Sku|Name|Company|Price|Shipping|InStock
-A1|AmpEnergy|PepsiCo|32|0|7
-A2|Aquafina|PepsiCo|35|32|2
-A3|DoubleCola|TheDoubleColaCompany|35|32|3
-A5|Aquafina|PepsiCo|35|32|0
